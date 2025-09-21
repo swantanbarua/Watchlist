@@ -38,14 +38,14 @@ class Movie {
         
         container.mainContext.insert(
             Movie(
-                title: "",
+                title: "The Godfather",
                 genre: Genre(rawValue: 3)!
             )
         )
         
         container.mainContext.insert(
             Movie(
-                title: "",
+                title: "Inside Job",
                 genre: Genre(rawValue: 4)!
             )
         )
@@ -73,7 +73,7 @@ class Movie {
         
         container.mainContext.insert(
             Movie(
-                title: "",
+                title: "Hamilton",
                 genre: Genre(rawValue: 8)!
             )
         )
@@ -94,7 +94,7 @@ class Movie {
         
         container.mainContext.insert(
             Movie(
-                title: "",
+                title: "Parasite",
                 genre: Genre(rawValue: 11)!
             )
         )
