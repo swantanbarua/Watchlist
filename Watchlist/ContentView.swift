@@ -16,13 +16,14 @@ struct ContentView: View {
     
     // MARK: - BODY
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List {
+            
         }
-        .padding()
+        .overlay {
+            if movies.isEmpty {
+                EmptyView()
+            }
+        }
     }
 }
 
