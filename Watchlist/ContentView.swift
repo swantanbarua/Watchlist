@@ -6,8 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    
+    // MARK: - PROPERTIES
+    @Environment(\.modelContext) private var modelContext
+    @Query private var movies: [Movie]
+    
+    // MARK: - BODY
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -21,4 +28,8 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .modelContainer(
+            for: Movie.self,
+            inMemory: true
+        )
 }

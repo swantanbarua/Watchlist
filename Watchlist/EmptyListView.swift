@@ -38,6 +38,10 @@ struct EmptyListView: View {
                             -6
                         )
                 }
+                .padding(
+                    .bottom,
+                    90
+                )
         } description: {
             GroupBox {
                 TabView {
@@ -45,10 +49,17 @@ struct EmptyListView: View {
                         icon: "1.circle",
                         description: "Add some movies to the watchlist if you plan to watch them later"
                     )
+                    .padding(
+                        .bottom, 36
+                    )
                     
                     PageTabView(
                         icon: "2.circle",
                         description: "Later on you can also choose a random film to watch"
+                    )
+                    .padding(
+                        .bottom,
+                        36
                     )
                 }
                 .tabViewStyle(PageTabViewStyle())
