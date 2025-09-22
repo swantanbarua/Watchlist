@@ -40,14 +40,23 @@ struct EmptyListView: View {
                 }
         } description: {
             GroupBox {
-                PageTabView(
-                    icon: "1.circle",
-                    description: "Add some movies to the watchlist if you plan to watch them later"
-                )
-                
-                PageTabView(
-                    icon: "2.circle",
-                    description: "Later on you can also choose a random film to watch"
+                TabView {
+                    PageTabView(
+                        icon: "1.circle",
+                        description: "Add some movies to the watchlist if you plan to watch them later"
+                    )
+                    
+                    PageTabView(
+                        icon: "2.circle",
+                        description: "Later on you can also choose a random film to watch"
+                    )
+                }
+                .tabViewStyle(PageTabViewStyle())
+                .frame(
+                    minWidth: 0,
+                    maxWidth: 560,
+                    minHeight: 120,
+                    maxHeight: 180
                 )
             }
         }
