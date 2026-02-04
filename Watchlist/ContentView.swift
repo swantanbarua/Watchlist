@@ -5,6 +5,7 @@
 //  Created by Swantan Barua on 21/09/25.
 //
 
+// MARK: - IMPORTS
 import SwiftUI
 import SwiftData
 
@@ -21,7 +22,7 @@ struct ContentView: View {
         }
         .overlay {
             if movies.isEmpty {
-                EmptyView()
+                EmptyListView()
             }
         }
     }

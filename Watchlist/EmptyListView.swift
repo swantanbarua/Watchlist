@@ -19,11 +19,11 @@ struct EmptyListView: View {
                     lineWidth: 30
                 )
                 .stroke(
-                    .blue.gradient.opacity(0.15),
+                    .blue.gradient.opacity(0.3),
                     lineWidth: 60
                 )
                 .stroke(
-                    .blue.gradient.opacity(0.15),
+                    .blue.gradient.opacity(0.45),
                     lineWidth: 90
                 )
                 .frame(width: 180)
@@ -32,7 +32,9 @@ struct EmptyListView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 100)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(
+                            Color(UIColor.secondarySystemBackground)
+                        )
                         .padding(
                             .top,
                             -6
@@ -50,7 +52,8 @@ struct EmptyListView: View {
                         description: "Add some movies to the watchlist if you plan to watch them later"
                     )
                     .padding(
-                        .bottom, 36
+                        .bottom,
+                        36
                     )
                     
                     PageTabView(
