@@ -59,11 +59,11 @@ extension Genre {
         case .musical:
             "Musical"
             
-        case .romance:
-            "Romance"
-            
         case .scifi:
             "Sci-Fi"
+            
+        case .romance:
+            "Romance"
             
         case .thriller:
             "Thriller"
