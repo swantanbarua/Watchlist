@@ -17,7 +17,9 @@ struct NewMovieFormView: View {
     var body: some View {
         Form {
             List {
-               Text("What to Watch?")
+                
+                // MARK: - HEADEr
+                Text("What to Watch?")
                     .font(.largeTitle.weight(.black))
                     .foregroundStyle(.blue.gradient)
                     .frame(
@@ -27,12 +29,24 @@ struct NewMovieFormView: View {
                     )
                     .padding(.vertical)
                 
+                // MARK: - TITLE
                 TextField(
                     "Movie Title",
                     text: $title
                 )
                 .textFieldStyle(.roundedBorder)
                 .font(.largeTitle.weight(.light))
+                
+                // MARK: - GENRE
+                Picker(
+                    "Genre",
+                    selection: $selectedGenre
+                ) {
+                    ForEach(Genre.allCases) { genre in
+                        Text(genre.name)
+                            .tag(genre)
+                    }
+                }
             }
             .listRowSeparator(.hidden)
         }
