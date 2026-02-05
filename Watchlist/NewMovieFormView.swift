@@ -15,6 +15,17 @@ struct NewMovieFormView: View {
     @State private var title = ""
     @State private var selectedGenre: Genre = .kids
     
+    private func addNewMovie() {
+        let movie = Movie(
+            title: title,
+            genre: selectedGenre
+        )
+        
+        modelContext.insert(movie)
+        title = ""
+        selectedGenre = .kids
+    }
+    
     // MARK: - BODY
     var body: some View {
         Form {
