@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct NewMovieFormView: View {
     
     // MARK: - PROPERTIES
+    @Environment(\.modelContext) private var modelContext
     @State private var title = ""
     @State private var selectedGenre: Genre = .kids
     
@@ -46,6 +48,26 @@ struct NewMovieFormView: View {
                         Text(genre.name)
                             .tag(genre)
                     }
+                }
+                
+                // MARK: - SAVE BUTTON
+                Button {
+                    
+                } label: {
+                    Text("Save")
+                        .font(.title2.weight(.medium))
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .controlSize(.large)
+                .buttonBorderShape(.roundedRectangle)
+                
+                // MARK: - CANCEL BUTTON
+                Button {
+                    
+                } label: {
+                    Text("Close")
+                        .frame(maxWidth: .infinity)
                 }
             }
             .listRowSeparator(.hidden)
